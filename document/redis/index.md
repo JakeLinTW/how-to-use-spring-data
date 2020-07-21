@@ -2,6 +2,7 @@
 
 
 - Redis 簡介
+    - [install](./install.md)
     - [Data structures](./data_structures.md)
     - [Commands](./commands.md)
 
