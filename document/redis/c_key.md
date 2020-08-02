@@ -5,14 +5,14 @@
     - 會 Block Reids 直到搜尋完成，如果有幾百萬個 Key 會造成整個 Redis 卡死一段時間
     - 建議不要在 Production 使用這個指令
     - 使用上比較簡單，通常用在 debug
-    - 可使用 * 號進行模糊查詢
+    - 支援 [Glob-style pattern](https://en.wikipedia.org/wiki/Glob_(programming))
     - Example
         - KEYS customer:*
         - KEYS customer:1000
 
 2. SCAN cursor [MATCH pattern] [COUNT count]
     - 使用 Cursor 查詢 Redis 存在的 Key 值
-    - 也會 Block，但一次只回傳 0 到指定數量的 Key
+    - 也會 Block，但一次只回傳 0 到指定數量的 Key ( 通常一次一百個 )
     - Safe for production
     - Slot 放入查詢回傳的 Cursor ，重複查詢直到 Cursor 回到 0 結束 Iterate
     - Example
@@ -30,8 +30,9 @@
     - 直接刪除 Key
 
 5. UNLINK key [key ...]
+    - 刪除 Key 推薦使用 UNLINK
     - Asynchronous process, non-blocking command.
-    - 取消 Key 關聯，異步回收 Memory
+    - 取消 Key 關聯，由後台的 Thread 異步回收 Memory
 
 6. TYPE key
     - 檢查 Key 型別

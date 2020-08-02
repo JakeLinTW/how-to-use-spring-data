@@ -18,6 +18,12 @@
         - [Set](./c_set.md)
         - [Sorted set](./c_sorted_set.md)
 
+    - Advance
+        - [Capped collections](./capped_collections.md)
+        - [Set operations](./set_operations.md)
+        - [Faceted search](./faceted_search.md)
+        - [Big O notation and Redis commands](./big_o.md)
+
 <br>
 <br>
 <br>

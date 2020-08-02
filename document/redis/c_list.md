@@ -39,4 +39,13 @@
         - LREM key count value
     
     - 只保留指定區域的資料
-        - LTRIM key count value
+        - LTRIM key start stop
+            - start 和 stop 會保留
+            - 從左側開始使用正數
+            - 從右側開始使用負數
+                - Example
+                    - LTRIM customer 0 4
+                        - 保留 index 0 1 2 3 4 的 customer
+
+                    - LTRIM customer 0 -2
+                        - 保留除了 index -1 也就是最後一個元素以外的所有元素

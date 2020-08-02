@@ -23,26 +23,30 @@
         - SET customer:1 PX 60
         - SET customer:1 EX 5 XX
 
-2. GET key
-    - 取得對應的 Value
+2. MSET key value [key value ...]
+    - 同時設置多個 key value pair
 
-3. DECRBY key decrement
+3. GET key
+    - 取得對應的 Value
+    - Time complexity: O(1)
+
+4. DECRBY key decrement
     - 整數遞減，可為負數
     - Key 不存在時自動建立
     - 遞減 1 縮寫 : DECR key
 
-4. INCRBY key increment
+5. INCRBY key increment
     - 整數遞增，可為負數
     - Key 不存在時自動建立
     - 遞增 1 縮寫 : INCR key
 
-5. INCRBYFLOAT key increment
+6. INCRBYFLOAT key increment
     - 浮點數操作，可為負數
     - Key 不存在時自動建立
 
-6. APPEND key value
+7. APPEND key value
     - 如果是 String，將 Value 串在末尾
     - 如果不存在則創建一個
 
-7. GETRANGE key start end
+8. GETRANGE key start end
     - 返回 substring

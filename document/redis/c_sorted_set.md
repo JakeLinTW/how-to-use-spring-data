@@ -63,6 +63,9 @@
     - 顯示分數區間內的成員數量
     - 等同於 ZRANGE 的成員數
 
+- ZCARD key
+    - 返回成員數量
+
 - Remove
     - 刪除一個或多個成員
     - By value
@@ -73,10 +76,25 @@
 
     - By posittion
         - ZREMRANGEBYRANK key start stop
+            - 刪除的成員包含 Start index 和 Stop index
 
     - By score
         - ZREMRANGEBYSCORE key min max
 
 - ZINTERSTORE destination numkeys key [key ...] [WEIGHTS weight [weight ...]] [AGGREGATE SUM|MIN|MAX]
+    - 允許對 Set 和 Sorted set 做操作
+    - destination
+        - 儲存排序後的結果的 Key ( 此操作會建立一個新的 Sorted set )
+
+    - numkeys
+        - 要操作的 Key 的數量
+
+    - WEIGHTS
+        - Score 會先乘上對應的 Weights 才進行後續操作
+        - 可直接指定 Set 的 Score，Set score 預設 1
+
+    - AGGREGATE
+        - 指定如何計算新的 Score
 
 - ZUNIONSTORE destination numkeys key [key ...] [WEIGHTS weight [weight ...]] [AGGREGATE SUM|MIN|MAX]
+    - 同 ZINTERSTORE
