@@ -17,7 +17,7 @@
 
                 - Multiple indexs
                     - 資料庫需支援 Index intersection
-                    - 需可使用 statistics 優化查詢
+                    - 需保持 statistics 正確
 
                 - Compound indexs
                     - 若有多種組合搜尋條件，管理會變得很複雜
