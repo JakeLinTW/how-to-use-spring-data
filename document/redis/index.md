@@ -4,11 +4,11 @@
     - [Install](./install.md)
     - Data structures
         - [Key](./key.md)
-        - [String](./string.md)
-        - [Hash](./hash.md)
-        - [List](./list.md)
-        - [Set](./set.md)
-        - [Sorted set](./sorted_set.md)
+            - [String](./string.md)
+            - [Hash](./hash.md)
+            - [List](./list.md)
+            - [Set](./set.md)
+            - [Sorted set](./sorted_set.md)
 
     - Commands
         - [Key](./c_key.md)
@@ -17,12 +17,14 @@
         - [List](./c_list.md)
         - [Set](./c_set.md)
         - [Sorted set](./c_sorted_set.md)
+        - [Transaction](./c_transaction.md)
 
     - Advance
         - [Capped collections](./capped_collections.md)
         - [Set operations](./set_operations.md)
         - [Faceted search](./faceted_search.md)
         - [Big O notation and Redis commands](./big_o.md)
+        - [Transaction](./transaction.md)
 
 <br>
 <br>
