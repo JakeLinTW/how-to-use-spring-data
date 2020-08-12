@@ -17,14 +17,17 @@
         - [List](./c_list.md)
         - [Set](./c_set.md)
         - [Sorted set](./c_sorted_set.md)
-        - [Transaction](./c_transaction.md)
-
+        
     - Advance
+        - [Big O notation and Redis commands](./big_o.md)
+        - [Transaction](./transaction.md)
+        - [Publish / Subscribe](./pub_sub.md)
+
+    - Use case
         - [Capped collections](./capped_collections.md)
         - [Set operations](./set_operations.md)
         - [Faceted search](./faceted_search.md)
-        - [Big O notation and Redis commands](./big_o.md)
-        - [Transaction](./transaction.md)
+
 
 <br>
 <br>
