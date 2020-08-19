@@ -22,6 +22,7 @@
         - [Big O notation and Redis commands](./big_o.md)
         - [Transaction](./transaction.md)
         - [Publish / Subscribe](./pub_sub.md)
+        - [Lua scripting](./lua.md)
 
     - Use case
         - [Capped collections](./capped_collections.md)

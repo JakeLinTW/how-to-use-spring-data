@@ -7,6 +7,12 @@
         2. 檢查 Key 型別是否正確
         3. 檢查 Value encoding
         4. 改變 value
+        
+- Operation by value type
+    - Strings: APPEND, GETRANGE, SETRANGE, STRLEN
+    - Integers: INCR, INCRBY, DECR, DECRBY
+    - Floats: INCRBYFLOAT
+    - Bits: SETBIT, GETBIT, BITPOS, BITCOUNT, BITOP
 
 - Binary data
 - Maximum of 512 MB
