@@ -118,3 +118,6 @@
 
     - Install Redis on Windows
         - https://github.com/MicrosoftArchive/redis
+
+- Redis-cli 中文編碼
+    - 使用 redis-cli --raw 啟動，強制輸出原始資料

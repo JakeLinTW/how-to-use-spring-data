@@ -29,7 +29,7 @@
             ```
 
 - Snapshotting
-    - 可設定執行間隔
+    - 在配置文件中設定執行間隔
 
         ```txt
         // 60 秒內有至少 1000 次 Key 變動時
@@ -66,25 +66,25 @@
     - Fsync to Disk
         - Redis 支援三種 Fsync 設定
             - appendfsync always: 隨時
-            - appendfsync everysec: 每秒一次( Default )
+            - appendfsync everysec: 每秒一次( Default setting )
             - appendfsync no: 不同步
 
 - Command
     - RDB
         - SAVE
-            - 同步
+            - Synchronous
             - 立刻執行資料備份
 
         - BGSAVE [SCHEDULE]
-            - 異步
+            - Asynchronous
             - Fork process 在背景執行
             - BGSAVE SCHEDULE 在 AOF rewrite 時會立刻返回 ok，避免衝突
 
         - LASTSAVE
-            - 查詢上一次備份執行時間
+            - 查詢上一次備份執行時間( UNIX time stamp )
 
     - AOF
         - BGREWRITEAOF
-            - 異步
+            - Asynchronous
             - Fork process 在背景執行
             - 對 AOF 進行重寫操作，Redis 2.4 後可透過設定自動觸發
