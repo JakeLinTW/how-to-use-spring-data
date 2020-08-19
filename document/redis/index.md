@@ -23,6 +23,7 @@
         - [Transaction](./transaction.md)
         - [Publish / Subscribe](./pub_sub.md)
         - [Lua scripting](./lua.md)
+        - [Redis persistence](./persistence.md)
 
     - Use case
         - [Capped collections](./capped_collections.md)
