@@ -1,4 +1,4 @@
-# How to use - Spring Data
+# Demo project - Spring Data
 
-[Spring Data JPA](./document/redis/index.md)  
-[Spring Data Redis](./document/redis/index.md)
+[Spring Data JPA](./documents/spring-data-jpa.md)  
+[Spring Data Redis](./documents/spring-data-redis.md)

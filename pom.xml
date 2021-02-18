@@ -6,14 +6,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.jake</groupId>
-    <artifactId>how-to-use-spring-data</artifactId>
+    <artifactId>spring-data-demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>How to use - Spring Data</name>
+    <name>Spring Data demo</name>
     <description>Demo project for Spring Data</description>
     <packaging>pom</packaging>
 
     <modules>
         <module>spring-data-jpa-demo</module>
+        <module>spring-data-redis-demo</module>
     </modules>
 
 </project>
