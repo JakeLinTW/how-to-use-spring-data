@@ -35,7 +35,7 @@ public class ForumService {
             Post post = postOpt.get();
 
             List<Comment> commentList = commentJpaRepository.findByPostId(postId);
-            var commentDetailList = new ArrayList<CommentDetail>();
+            List<CommentDetail> commentDetailList = new ArrayList<CommentDetail>();
             commentList.forEach(c -> commentDetailList.add(CommentDetail.builder()
                     .postId(c.getPostId())
                     .content(c.getContent())
@@ -61,7 +61,7 @@ public class ForumService {
         Page<Post> postPage = postJpaRepository.findAll(page);
         List<Post> postList = postPage.getContent();
 
-        var r = new ArrayList<PostSummary>();
+        List<PostSummary> r = new ArrayList<PostSummary>();
 
         postList.forEach(p -> r.add(PostSummary.builder()
                 .postId(p.getId())
@@ -74,7 +74,7 @@ public class ForumService {
     }
 
     public boolean createPost(PostRequest req) {
-        var post = new Post();
+        Post post = new Post();
         post.setTopic(req.getTopic());
         post.setContent(req.getContent());
         postJpaRepository.saveAndFlush(post);
@@ -82,7 +82,7 @@ public class ForumService {
     }
 
     public boolean createComment(CommentRequest req) {
-        var comment = new Comment();
+        Comment comment = new Comment();
         comment.setPostId(req.getPostId());
         comment.setContent(req.getContent());
         commentJpaRepository.saveAndFlush(comment);
